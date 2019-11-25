@@ -16,6 +16,12 @@
 
      - Example: Credit reporting
 
+### Requirements:
+
+ - Pandas
+ - Tensorflow
+ 
+
 ### Train:
 
  - Command: python3 train.py training_data.file parameters.json
