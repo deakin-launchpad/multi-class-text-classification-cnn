@@ -13,6 +13,7 @@ from sklearn.model_selection import train_test_split
 logging.getLogger().setLevel(logging.INFO)
 
 def train_cnn():
+	path = ''
 	"""Step 0: load sentences, labels, and training parameters"""
 	train_file = sys.argv[1]
 	x_raw, y_raw, df, labels = data_helper.load_data_and_labels(train_file)

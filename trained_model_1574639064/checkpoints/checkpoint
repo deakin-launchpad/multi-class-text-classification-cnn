@@ -1,0 +1,6 @@
+model_checkpoint_path: "/home/kalrasom/Claudette/multi-class-text-classification-cnn/trained_model_1574639064/checkpoints/model-2800"
+all_model_checkpoint_paths: "/home/kalrasom/Claudette/multi-class-text-classification-cnn/trained_model_1574639064/checkpoints/model-1600"
+all_model_checkpoint_paths: "/home/kalrasom/Claudette/multi-class-text-classification-cnn/trained_model_1574639064/checkpoints/model-1800"
+all_model_checkpoint_paths: "/home/kalrasom/Claudette/multi-class-text-classification-cnn/trained_model_1574639064/checkpoints/model-2000"
+all_model_checkpoint_paths: "/home/kalrasom/Claudette/multi-class-text-classification-cnn/trained_model_1574639064/checkpoints/model-2600"
+all_model_checkpoint_paths: "/home/kalrasom/Claudette/multi-class-text-classification-cnn/trained_model_1574639064/checkpoints/model-2800"

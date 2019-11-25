@@ -1,0 +1,18 @@
+[
+    {
+        "Sentence": "In some cases , we are not able to control the amount or type of  information that other parties like social networks , make available to  us .",
+        "new_prediction": "Unclear language clause"
+    },
+    {
+        "Sentence": "When you choose to use a social feature of our games and applications ,  you allow Epic to receive information about you from social networks .",
+        "new_prediction": "Insufficient information clause for categories"
+    },
+    {
+        "Sentence": "We may provide you marketing for our Services and those of the Facebook Companies .",
+        "new_prediction": "Problematic processing clause for categories"
+    },
+    {
+        "Sentence": "If your Country of Residence is the United States , the Data Controller is Airbnb , Inc .",
+        "new_prediction": "Full information clause for categories"
+    }
+]

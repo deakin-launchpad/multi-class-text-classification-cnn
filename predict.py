@@ -29,13 +29,13 @@ def predict_unseen_data():
 	np.fill_diagonal(one_hot, 1)
 	label_dict = dict(zip(labels, one_hot))
 
-	x_raw = [example['consumer_complaint_narrative'] for example in test_examples]
+	x_raw = [example['Sentence'] for example in test_examples]
 	x_test = [data_helper.clean_str(x) for x in x_raw]
 	logging.info('The number of x_test: {}'.format(len(x_test)))
 
 	y_test = None
-	if 'product' in test_examples[0]:
-		y_raw = [example['product'] for example in test_examples]
+	if 'Labels' in test_examples[0]:
+		y_raw = [example['Labels'] for example in test_examples]
 		y_test = [label_dict[y] for y in y_raw]
 		logging.info('The number of y_test: {}'.format(len(y_test)))
 
@@ -63,21 +63,21 @@ def predict_unseen_data():
 				batch_predictions = sess.run(predictions, {input_x: x_test_batch, dropout_keep_prob: 1.0})
 				all_predictions = np.concatenate([all_predictions, batch_predictions])
 
-	if y_test is not None:
-		y_test = np.argmax(y_test, axis=1)
-		correct_predictions = sum(all_predictions == y_test)
+	#if y_test is not None:
+	#	y_test = np.argmax(y_test, axis=1)
+	#	correct_predictions = sum(all_predictions == y_test)
 
 		# Save the actual labels back to file
-		actual_labels = [labels[int(prediction)] for prediction in all_predictions]
+	actual_labels = [labels[int(prediction)] for prediction in all_predictions]
 
-		for idx, example in enumerate(test_examples):
-			example['new_prediction'] = actual_labels[idx]
+	for idx, example in enumerate(test_examples):
+		example['new_prediction'] = actual_labels[idx]
 		
-		with open('./data/small_samples_prediction.json', 'w') as outfile:
-			json.dump(test_examples, outfile, indent=4)
+	with open('./data/prediction.json', 'w') as outfile:
+		json.dump(test_examples, outfile, indent=4)
 
-		logging.critical('The accuracy is: {}'.format(correct_predictions / float(len(y_test))))
-		logging.critical('The prediction is complete')
+	#logging.critical('The accuracy is: {}'.format(correct_predictions / float(len(y_test))))
+	logging.critical('The prediction is complete')
 
 if __name__ == '__main__':
 	# python3 predict.py ./trained_model_1478649295/ ./data/small_samples.json
