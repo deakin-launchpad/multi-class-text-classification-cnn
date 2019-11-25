@@ -19,7 +19,8 @@
 ### Requirements:
 
  - Pandas
- - Tensorflow
+ - Tensorflow==1.13.1
+ - Sklearn
  
 
 ### Train:
