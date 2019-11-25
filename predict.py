@@ -14,6 +14,7 @@ def predict_unseen_data():
 	"""Step 0: load trained model and parameters"""
 	params = json.loads(open('./parameters.json').read())
 	checkpoint_dir = sys.argv[1]
+	#checkpoint_dir = '/home/ubuntu/multi-class-text-classification-cnn/trained_model_1574639064/'
 	if not checkpoint_dir.endswith('/'):
 		checkpoint_dir += '/'
 	checkpoint_file = tf.train.latest_checkpoint(checkpoint_dir + 'checkpoints')
